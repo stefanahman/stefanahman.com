@@ -31,5 +31,12 @@ const { Content } = await render(post);
       </p>
     </header>
     <Content />
+    {post.data.tags.length > 0 && (
+      <footer class="post-tags">
+        {post.data.tags.map((tag) => (
+          <a href={`/writing/tags/${tag}/`}>#{tag}</a>
+        ))}
+      </footer>
+    )}
   </article>
 </BaseLayout>

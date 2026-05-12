@@ -182,6 +182,28 @@ img {
   color: var(--fg);
 }
 
+.page-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.page-header h1 {
+  margin: 0;
+}
+
+.page-header-link {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+  text-decoration: none;
+}
+
+.page-header-link:hover {
+  color: var(--fg);
+}
+
 .archive-year {
   margin: var(--space-4) 0 0;
 }
@@ -246,4 +268,24 @@ article.post .post-meta {
   font-family: var(--font-sans);
   font-size: 0.85rem;
   color: var(--fg-faint);
+}
+
+.post-tags {
+  margin-top: var(--space-5);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+}
+
+.post-tags a {
+  color: var(--fg-muted);
+  text-decoration: none;
+}
+
+.post-tags a:hover {
+  color: var(--fg);
 }

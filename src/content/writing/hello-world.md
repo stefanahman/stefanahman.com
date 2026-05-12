@@ -2,7 +2,7 @@
 title: Hello, world
 description: First post on the new site — what this place is for.
 pubDate: 2026-05-12
-tags: [meta]
+tags: [meta, craft]
 ---
 
 I've finally moved my writing somewhere I control. This is the first post.
