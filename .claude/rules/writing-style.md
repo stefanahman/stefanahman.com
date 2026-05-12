@@ -43,6 +43,8 @@ The goal is to sound like a person who blogs, not an assistant that generates po
 
 12. **Semicolons only when a period would be wrong.** Don't use them to sound sophisticated. If a period works, use the period.
 
+13. **For explanatory or technical posts, lead with the answer.** If the post is "How to X" or "Why Y", the first sentence should answer X or Y. AI engines and impatient readers extract the first parseable answer. Setup paragraphs lose the citation. This is the machine-readable counterpart to rule 1.
+
 ## Scope notes
 
 - **UI copy** (nav links, button labels, page titles, meta descriptions): same spirit, more compression. Cut "the", "a", filler verbs. Concrete over abstract.

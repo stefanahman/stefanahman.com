@@ -1,0 +1,19 @@
+# Stefan Åhman
+
+> Software engineer in Stockholm. Writing about software, craft, photography, and the personal stuff too.
+
+## Writing
+
+- [All writing](https://stefanahman.com/writing): chronological archive of essays and notes.
+- [Tags](https://stefanahman.com/writing/tags/): topics across the writing.
+
+## About
+
+- [About](https://stefanahman.com/about): who I am and how to reach me.
+- [GitHub](https://github.com/stefanahman)
+- [LinkedIn](https://www.linkedin.com/in/stefanahman/)
+
+## Feeds
+
+- [RSS](https://stefanahman.com/rss.xml)
+- [Sitemap](https://stefanahman.com/sitemap-index.xml)

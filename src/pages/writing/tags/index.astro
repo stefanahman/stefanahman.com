@@ -15,7 +15,15 @@ const tags = [...counts.entries()].sort((a, b) =>
 );
 ---
 
-<BaseLayout title="Tags" description="All tags across writing.">
+<BaseLayout
+  title="Tags"
+  description="All tags across writing."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Writing', url: '/writing/' },
+    { name: 'Tags' },
+  ]}
+>
   <h1>Tags</h1>
   {tags.length === 0 ? (
     <p>No tags yet.</p>

@@ -1,16 +1,88 @@
 ---
 import '../styles/global.css';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_AUTHOR } from '../consts';
+
+interface Crumb {
+  name: string;
+  url?: string;
+}
 
 interface Props {
   title?: string;
   description?: string;
+  type?: 'website' | 'article';
+  pubDate?: Date;
+  updatedDate?: Date;
+  tags?: string[];
+  breadcrumbs?: Crumb[];
 }
 
-const { title, description = SITE_DESCRIPTION } = Astro.props;
+const {
+  title,
+  description = SITE_DESCRIPTION,
+  type = 'website',
+  pubDate,
+  updatedDate,
+  tags = [],
+  breadcrumbs = [],
+} = Astro.props;
+
 const pageTitle = title ? `${title} — ${SITE_TITLE}` : SITE_TITLE;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).href;
 const path = Astro.url.pathname;
 const isWriting = path.startsWith('/writing');
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_TITLE,
+  url: Astro.site?.href ?? Astro.url.origin,
+  description: SITE_DESCRIPTION,
+  author: {
+    '@type': 'Person',
+    name: SITE_AUTHOR,
+    url: Astro.site?.href ?? Astro.url.origin,
+    sameAs: [
+      'https://github.com/stefanahman',
+      'https://www.linkedin.com/in/stefanahman/',
+    ],
+  },
+};
+
+const origin = Astro.site?.href.replace(/\/$/, '') ?? Astro.url.origin;
+const breadcrumbsJsonLd =
+  breadcrumbs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbs.map((crumb, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: crumb.name,
+          ...(crumb.url ? { item: `${origin}${crumb.url}` } : {}),
+        })),
+      }
+    : null;
+
+const articleJsonLd =
+  type === 'article' && pubDate
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: title,
+        description,
+        datePublished: pubDate.toISOString(),
+        dateModified: (updatedDate ?? pubDate).toISOString(),
+        author: {
+          '@type': 'Person',
+          name: SITE_AUTHOR,
+          url: Astro.site?.href ?? Astro.url.origin,
+        },
+        mainEntityOfPage: canonical,
+        url: canonical,
+        keywords: tags.join(', ') || undefined,
+      }
+    : null;
 ---
 
 <!doctype html>
@@ -19,16 +91,57 @@ const isWriting = path.startsWith('/writing');
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#1c211b" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical} />
     <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href="/rss.xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    <meta name="author" content={SITE_AUTHOR} />
+
+    <meta property="og:site_name" content={SITE_TITLE} />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonical} />
+    {type === 'article' && pubDate && (
+      <meta property="article:published_time" content={pubDate.toISOString()} />
+    )}
+    {type === 'article' && updatedDate && (
+      <meta property="article:modified_time" content={updatedDate.toISOString()} />
+    )}
+    {type === 'article' && (
+      <meta property="article:author" content={SITE_AUTHOR} />
+    )}
+    {type === 'article' && tags.map((tag) => (
+      <meta property="article:tag" content={tag} />
+    ))}
+
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(websiteJsonLd)}
+    />
+    {articleJsonLd && (
+      <script
+        is:inline
+        type="application/ld+json"
+        set:html={JSON.stringify(articleJsonLd)}
+      />
+    )}
+    {breadcrumbsJsonLd && (
+      <script
+        is:inline
+        type="application/ld+json"
+        set:html={JSON.stringify(breadcrumbsJsonLd)}
+      />
+    )}
   </head>
   <body>
     <header class="site-header">
@@ -45,8 +158,8 @@ const isWriting = path.startsWith('/writing');
       <span>© {new Date().getFullYear()} Stefan Åhman</span>
       <span>
         <a href="/rss.xml">RSS</a> ·
-        <a href="https://github.com/stefanahman">GitHub</a> ·
-        <a href="https://www.linkedin.com/in/stefanahman/">LinkedIn</a>
+        <a rel="me" href="https://github.com/stefanahman">GitHub</a> ·
+        <a rel="me" href="https://www.linkedin.com/in/stefanahman/">LinkedIn</a>
       </span>
     </footer>
   </body>

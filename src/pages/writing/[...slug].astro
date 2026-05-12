@@ -2,6 +2,7 @@
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
+import { SITE_AUTHOR } from '../../consts';
 
 export async function getStaticPaths() {
   const posts = await getCollection('writing', ({ data }) => !data.draft);
@@ -19,11 +20,25 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description}>
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  type="article"
+  pubDate={post.data.pubDate}
+  updatedDate={post.data.updatedDate}
+  tags={post.data.tags}
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Writing', url: '/writing/' },
+    { name: post.data.title },
+  ]}
+>
   <article class="post">
     <header>
       <h1>{post.data.title}</h1>
       <p class="post-meta">
+        by <a class="post-author" rel="author" href="/about">{SITE_AUTHOR}</a>
+        {' · '}
         <FormattedDate date={post.data.pubDate} />
         {post.data.updatedDate && (
           <> · updated <FormattedDate date={post.data.updatedDate} /></>

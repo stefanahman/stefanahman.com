@@ -32,7 +32,16 @@ const shortDate = (d: Date) =>
   d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 ---
 
-<BaseLayout title={tag} description={`Writing tagged ${tag}.`}>
+<BaseLayout
+  title={tag}
+  description={`Writing tagged ${tag}.`}
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Writing', url: '/writing/' },
+    { name: 'Tags', url: '/writing/tags/' },
+    { name: tag },
+  ]}
+>
   <p class="post-meta"><a href="/writing/tags/">← all tags</a></p>
   <h1>{tag}</h1>
   <ul class="archive-list">
