@@ -23,7 +23,7 @@ const tags = [...counts.entries()].sort((a, b) =>
     <ul class="archive-list">
       {tags.map(([tag, count]) => (
         <li>
-          <a href={`/writing/tags/${tag}/`}>#{tag}</a>
+          <a href={`/writing/tags/${tag}/`}>{tag}</a>
           <span class="archive-date">{count}</span>
         </li>
       ))}

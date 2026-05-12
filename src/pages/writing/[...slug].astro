@@ -28,15 +28,19 @@ const { Content } = await render(post);
         {post.data.updatedDate && (
           <> · updated <FormattedDate date={post.data.updatedDate} /></>
         )}
+        {post.data.tags.length > 0 && (
+          <>
+            {' · '}
+            {post.data.tags.map((tag, i) => (
+              <>
+                {i > 0 && ', '}
+                <a class="post-tag" href={`/writing/tags/${tag}/`}>{tag}</a>
+              </>
+            ))}
+          </>
+        )}
       </p>
     </header>
     <Content />
-    {post.data.tags.length > 0 && (
-      <footer class="post-tags">
-        {post.data.tags.map((tag) => (
-          <a href={`/writing/tags/${tag}/`}>#{tag}</a>
-        ))}
-      </footer>
-    )}
   </article>
 </BaseLayout>

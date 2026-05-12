@@ -32,9 +32,9 @@ const shortDate = (d: Date) =>
   d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 ---
 
-<BaseLayout title={`#${tag}`} description={`Writing tagged ${tag}.`}>
+<BaseLayout title={tag} description={`Writing tagged ${tag}.`}>
   <p class="post-meta"><a href="/writing/tags/">← all tags</a></p>
-  <h1>#{tag}</h1>
+  <h1>{tag}</h1>
   <ul class="archive-list">
     {posts.map((post) => (
       <li>

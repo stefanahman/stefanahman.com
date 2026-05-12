@@ -270,22 +270,13 @@ article.post .post-meta {
   color: var(--fg-faint);
 }
 
-.post-tags {
-  margin-top: var(--space-5);
-  padding-top: var(--space-2);
-  border-top: 1px solid var(--border);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-}
-
-.post-tags a {
-  color: var(--fg-muted);
+.post-tag {
+  color: var(--fg-faint);
   text-decoration: none;
 }
 
-.post-tags a:hover {
-  color: var(--fg);
+.post-tag:hover {
+  color: var(--fg-muted);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
 }
