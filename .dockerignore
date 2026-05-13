@@ -1,0 +1,14 @@
+.git
+.github
+.claude
+.astro
+.vercel
+.vscode
+.idea
+node_modules
+dist
+*.log
+.DS_Store
+.env
+.env.local
+README.md
