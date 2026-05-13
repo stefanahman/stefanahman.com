@@ -1,9 +1,10 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content';
+import { type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getPublishedWriting } from '../../../lib/content';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('writing', ({ data }) => !data.draft);
+  const posts = await getPublishedWriting();
   const byTag = new Map<string, CollectionEntry<'writing'>[]>();
   for (const post of posts) {
     for (const tag of post.data.tags) {

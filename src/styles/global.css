@@ -270,6 +270,21 @@ article.post .post-meta {
   color: var(--fg-faint);
 }
 
+.draft-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c6ad8d;
+  background: rgba(198, 173, 141, 0.1);
+  border: 1px solid rgba(198, 173, 141, 0.3);
+  border-radius: 3px;
+  padding: 2px 8px;
+  margin: 0 0 var(--space-2);
+}
+
 .post-tag,
 .post-author {
   color: var(--fg-faint);

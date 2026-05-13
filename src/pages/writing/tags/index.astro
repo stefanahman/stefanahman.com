@@ -1,8 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getPublishedWriting } from '../../../lib/content';
 
-const posts = await getCollection('writing', ({ data }) => !data.draft);
+const posts = await getPublishedWriting();
 
 const counts = new Map<string, number>();
 for (const post of posts) {

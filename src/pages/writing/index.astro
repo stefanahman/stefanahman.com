@@ -1,8 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPublishedWriting } from '../../lib/content';
 
-const posts = (await getCollection('writing', ({ data }) => !data.draft))
+const posts = (await getPublishedWriting())
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const groups = new Map<number, typeof posts>();
