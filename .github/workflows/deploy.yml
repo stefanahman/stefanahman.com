@@ -1,4 +1,4 @@
-name: Build and push container
+name: Build and deploy
 
 on:
   push:
@@ -15,6 +15,8 @@ jobs:
     permissions:
       contents: read
       packages: write
+    outputs:
+      image: ${{ steps.image.outputs.name }}
     steps:
       - uses: actions/checkout@v4
 
@@ -46,3 +48,28 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Connect to Tailscale
+        uses: tailscale/github-action@v4
+        with:
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+          tags: tag:ci-deploy
+          version: latest
+
+      - name: Trigger Watchtower update
+        env:
+          WATCHTOWER_URL: ${{ vars.WATCHTOWER_URL }}
+          WATCHTOWER_HTTP_TOKEN: ${{ secrets.WATCHTOWER_HTTP_TOKEN }}
+          IMAGE: ${{ needs.build.outputs.image }}
+        run: |
+          curl --fail --show-error --silent \
+            --max-time 30 \
+            -X POST \
+            -H "Authorization: Bearer ${WATCHTOWER_HTTP_TOKEN}" \
+            "${WATCHTOWER_URL%/}/v1/update?images=${IMAGE}:latest"
