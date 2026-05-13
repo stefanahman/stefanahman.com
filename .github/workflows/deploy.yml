@@ -68,8 +68,11 @@ jobs:
           WATCHTOWER_HTTP_TOKEN: ${{ secrets.WATCHTOWER_HTTP_TOKEN }}
           IMAGE: ${{ needs.build.outputs.image }}
         run: |
+          # `image` (singular) is the correct param per Watchtower docs.
+          # It scopes which containers get RESTARTED; the scan still
+          # walks all enabled containers (Watchtower API design).
           curl --fail --show-error --silent \
-            --max-time 30 \
+            --max-time 600 \
             -X POST \
             -H "Authorization: Bearer ${WATCHTOWER_HTTP_TOKEN}" \
-            "${WATCHTOWER_URL%/}/v1/update?images=${IMAGE}:latest"
+            "${WATCHTOWER_URL%/}/v1/update?image=${IMAGE}:latest"
