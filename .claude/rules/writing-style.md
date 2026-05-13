@@ -18,7 +18,7 @@ The goal is to sound like a person who blogs, not an assistant that generates po
 
 2. **One idea per sentence. One beat per paragraph.** Paragraphs of 1 to 4 sentences. White space is part of the rhythm. Long paragraphs read as AI even when they aren't.
 
-3. **Use periods, not em-dashes, as the default connector.** Em-dashes are allowed at most once or twice per post, only as a real parenthetical. If you'd type ` — `, try a period instead. The sentence is almost always sharper.
+3. **No em-dashes at all.** Use periods, parentheses, colons, or commas. The em-dash is one of the most recognizable AI-tells regardless of how it's used. If you'd type ` — `, try a period instead. The sentence is almost always sharper.
 
 4. **No "not just X, but Y" pivots.** No "it's not about X, it's about Y". These inverted-emphasis rhythms are the most recognizable AI tic. Just say what you mean.
 
