@@ -2,7 +2,7 @@
 title: Hello, world
 description: First post on the new site. What this place is for.
 pubDate: 2026-05-12
-tags: [meta, craft]
+tags: [meta, craft, tech]
 ---
 
 The old `stefanahman.github.io` was a single page with my name, an avatar, and a link to my CV. Good enough for a while. I wanted somewhere to write, and that needs more than one HTML file.

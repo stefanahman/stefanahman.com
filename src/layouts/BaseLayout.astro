@@ -95,6 +95,8 @@ const articleJsonLd =
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonical} />
     <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${SITE_TITLE} — tech`} href="/feed/tech.xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${SITE_TITLE} — life`} href="/feed/life.xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
@@ -165,7 +167,7 @@ const articleJsonLd =
     <footer class="site-footer">
       <span>© {new Date().getFullYear()} Stefan Åhman</span>
       <span>
-        <a href="/rss.xml">RSS</a> ·
+        RSS (<a href="/rss.xml">all</a>, <a href="/feed/tech.xml">tech</a>, <a href="/feed/life.xml">life</a>) ·
         <a rel="me" href="https://github.com/stefanahman">GitHub</a> ·
         <a rel="me" href="https://www.linkedin.com/in/stefanahman/">LinkedIn</a>
       </span>

@@ -2,7 +2,7 @@
 title: The art of reviewing
 description: Why star ratings are mostly noise, and how to read them anyway.
 pubDate: 2026-05-14
-tags: [food, reflection]
+tags: [food, reflection, life]
 ---
 
 A 3.7-star place with 30 reviews can be the best pizza in your neighborhood. A handful of bad reviews about parking pulled the math down. People scrolling with a 4.0+ filter never see it.
