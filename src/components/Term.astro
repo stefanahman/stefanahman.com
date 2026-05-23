@@ -1,0 +1,185 @@
+---
+interface Props {
+  sv?: string;
+  fr?: string;
+  it?: string;
+  note?: string;
+}
+
+const { sv, fr, it, note } = Astro.props;
+const id = `term-${Math.random().toString(36).slice(2, 10)}`;
+---
+
+<span class="term">
+  <button type="button" class="term-trigger" popovertarget={id} aria-describedby={id}>
+    <slot />
+  </button>
+  <div id={id} popover="auto" class="term-popover" role="tooltip">
+    {sv && (
+      <div class="row">
+        <span class="lang">SV</span>
+        <span class="translation">{sv}</span>
+      </div>
+    )}
+    {fr && (
+      <div class="row">
+        <span class="lang">FR</span>
+        <span class="translation">{fr}</span>
+      </div>
+    )}
+    {it && (
+      <div class="row">
+        <span class="lang">IT</span>
+        <span class="translation">{it}</span>
+      </div>
+    )}
+    {note && <p class="note">{note}</p>}
+  </div>
+</span>
+
+<style>
+  .term {
+    display: inline;
+  }
+  .term-trigger {
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: help;
+    text-decoration: underline dotted;
+    text-underline-offset: 0.2em;
+    text-decoration-color: rgba(0, 0, 0, 0.3);
+  }
+  .term-trigger:hover,
+  .term-trigger:focus-visible {
+    text-decoration-color: currentColor;
+    outline: none;
+  }
+  .term-popover {
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    padding: 0.6rem 0.8rem;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    font-size: 0.9rem;
+    max-width: 22rem;
+    line-height: 1.4;
+    color: #1a1a1a;
+  }
+  .term-popover .row {
+    display: grid;
+    grid-template-columns: 1.8rem 1fr;
+    gap: 0.5rem;
+    align-items: baseline;
+  }
+  .term-popover .row + .row {
+    margin-top: 0.25rem;
+  }
+  .term-popover .lang {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    color: rgba(0, 0, 0, 0.55);
+    font-weight: 600;
+  }
+  .term-popover .translation {
+    font-style: italic;
+  }
+  .term-popover .note {
+    margin: 0.6rem 0 0;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.85rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .term-trigger {
+      text-decoration-color: rgba(255, 255, 255, 0.4);
+    }
+    .term-popover {
+      background: #1f1f1f;
+      border-color: rgba(255, 255, 255, 0.15);
+      color: rgba(255, 255, 255, 0.92);
+    }
+    .term-popover .lang {
+      color: rgba(255, 255, 255, 0.55);
+    }
+    .term-popover .note {
+      border-top-color: rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+</style>
+
+<script>
+  function positionPopover(popover: HTMLElement) {
+    const trigger = document.querySelector<HTMLElement>(
+      `[popovertarget="${popover.id}"]`
+    );
+    if (!trigger) return;
+
+    const rect = trigger.getBoundingClientRect();
+    const popoverWidth = popover.offsetWidth;
+    const popoverHeight = popover.offsetHeight;
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const gap = 6;
+
+    let top = rect.bottom + gap;
+    let left = rect.left;
+
+    if (left + popoverWidth > vw - 8) {
+      left = vw - popoverWidth - 8;
+    }
+    if (left < 8) left = 8;
+
+    if (top + popoverHeight > vh - 8) {
+      top = rect.top - popoverHeight - gap;
+    }
+
+    popover.style.position = 'fixed';
+    popover.style.top = `${top}px`;
+    popover.style.left = `${left}px`;
+    popover.style.margin = '0';
+  }
+
+  document.querySelectorAll<HTMLElement>('.term-popover').forEach((popover) => {
+    popover.addEventListener('beforetoggle', (event) => {
+      if ((event as ToggleEvent).newState === 'open') {
+        requestAnimationFrame(() => positionPopover(popover));
+      }
+    });
+  });
+
+  // Hover-to-open on devices with a fine pointer (mouse).
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll<HTMLElement>('.term-trigger').forEach((trigger) => {
+      const targetId = trigger.getAttribute('popovertarget');
+      if (!targetId) return;
+      const popover = document.getElementById(targetId) as HTMLElement | null;
+      if (!popover) return;
+
+      let hideTimer: number | undefined;
+
+      const show = () => {
+        window.clearTimeout(hideTimer);
+        if (!popover.matches(':popover-open')) popover.showPopover();
+      };
+      const scheduleHide = () => {
+        hideTimer = window.setTimeout(() => {
+          if (popover.matches(':popover-open')) popover.hidePopover();
+        }, 120);
+      };
+
+      trigger.addEventListener('mouseenter', show);
+      trigger.addEventListener('mouseleave', scheduleHide);
+      popover.addEventListener('mouseenter', () => window.clearTimeout(hideTimer));
+      popover.addEventListener('mouseleave', scheduleHide);
+    });
+  }
+</script>
