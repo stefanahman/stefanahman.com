@@ -3,21 +3,22 @@ import { render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 import { SITE_AUTHOR } from '../../consts';
-import { getPublishedWriting } from '../../lib/content';
+import { getPublishedWriting, getRelatedPosts } from '../../lib/content';
 
 export async function getStaticPaths() {
   const posts = await getPublishedWriting();
   return posts.map((post) => ({
     params: { slug: post.id },
-    props: { post },
+    props: { post, related: getRelatedPosts(post, posts) },
   }));
 }
 
 interface Props {
   post: CollectionEntry<'writing'>;
+  related: CollectionEntry<'writing'>[];
 }
 
-const { post } = Astro.props;
+const { post, related } = Astro.props;
 const { Content } = await render(post);
 ---
 
@@ -63,4 +64,37 @@ const { Content } = await render(post);
     </header>
     <Content />
   </article>
+  {related.length > 0 && (
+    <nav class="related" aria-label="Related posts">
+      <h2>related</h2>
+      <ul>
+        {related.map((p) => (
+          <li><a href={`/writing/${p.id}/`}>{p.data.title}</a></li>
+        ))}
+      </ul>
+    </nav>
+  )}
 </BaseLayout>
+
+<style>
+  .related {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+  }
+  .related h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.6;
+    margin: 0 0 0.6rem;
+  }
+  .related ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+</style>

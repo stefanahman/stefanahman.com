@@ -35,21 +35,25 @@ const imageUrl = new URL(image, Astro.site ?? Astro.url.origin).href;
 const path = Astro.url.pathname;
 const isWriting = path.startsWith('/writing');
 
+const siteUrl = Astro.site?.href ?? Astro.url.origin;
+const authorSameAs = [
+  'https://github.com/stefanahman',
+  'https://www.linkedin.com/in/stefanahman/',
+];
+const authorEntity = {
+  '@type': 'Person',
+  name: SITE_AUTHOR,
+  url: siteUrl,
+  sameAs: authorSameAs,
+};
+
 const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: SITE_TITLE,
-  url: Astro.site?.href ?? Astro.url.origin,
+  url: siteUrl,
   description: SITE_DESCRIPTION,
-  author: {
-    '@type': 'Person',
-    name: SITE_AUTHOR,
-    url: Astro.site?.href ?? Astro.url.origin,
-    sameAs: [
-      'https://github.com/stefanahman',
-      'https://www.linkedin.com/in/stefanahman/',
-    ],
-  },
+  author: authorEntity,
 };
 
 const origin = Astro.site?.href.replace(/\/$/, '') ?? Astro.url.origin;
@@ -77,11 +81,9 @@ const articleJsonLd =
         image: imageUrl,
         datePublished: pubDate.toISOString(),
         dateModified: (updatedDate ?? pubDate).toISOString(),
-        author: {
-          '@type': 'Person',
-          name: SITE_AUTHOR,
-          url: Astro.site?.href ?? Astro.url.origin,
-        },
+        author: authorEntity,
+        publisher: authorEntity,
+        inLanguage: 'en',
         mainEntityOfPage: canonical,
         url: canonical,
         keywords: tags.join(', ') || undefined,
