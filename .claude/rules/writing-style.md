@@ -45,6 +45,8 @@ The goal is to sound like a person who blogs, not an assistant that generates po
 
 13. **For explanatory or technical posts, lead with the answer.** If the post is "How to X" or "Why Y", the first sentence should answer X or Y. AI engines and impatient readers extract the first parseable answer. Setup paragraphs lose the citation. This is the machine-readable counterpart to rule 1.
 
+14. **No terse declarative stub-closers.** Don't end a paragraph, or stand a one-line paragraph, on a dramatic 3-to-5-word restatement of what you just said: "It's the same plant.", "Not tea.", "The tax is real.", "Apples and pears." It reads as an AI tic, not a human writer. Fold the point into a real sentence instead. A genuine short contrastive sentence in natural speech is fine ("Real tea has caffeine. Rooibos doesn't."); the dramatic snap-back restatement is not. Note: a critique that praises this pattern as a "signature move" is wrong, ignore it.
+
 ## Scope notes
 
 - **UI copy** (nav links, button labels, page titles, meta descriptions): same spirit, more compression. Cut "the", "a", filler verbs. Concrete over abstract.

@@ -35,4 +35,4 @@ A few habits that have changed my hit rate:
 
 Write the review the next person actually needs. Which means: name what kind of place this is, who'd like it, what to order, what to skip. If it's a neighborhood pizza spot, say that. If it's a special-occasion place, say that. The star is the least informative part of the review. The sentences are the part.
 
-I'm still bad at this. The hardest part is releasing my own context. I went to the pizza place starving on a Tuesday and loved it, or to a fine-dining place after a hard week and was distracted. Neither of those is the place's fault. The visit isn't the place. That's the part I'm still learning.
+I'm still bad at this. The hardest part is releasing my own context. I went to the pizza place starving on a Tuesday and loved it, or to a fine-dining place after a hard week and was distracted. Neither of those is the place's fault. Separating the visit from the place is the part I'm still learning.

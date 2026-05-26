@@ -42,7 +42,7 @@ A note on accent and the model. I'm a Swede dictating in English, and Parakeet h
 
 Voice produces more raw words and also more rough edges. Misrecognitions, half-spoken thoughts, the wrong word that the model heard but I didn't say. Each transcript needs a pass before it lands.
 
-Handy handles part of the cleanup automatically. It picks up tone, so a question gets a question mark without me saying "question mark." That's enough for most prose-shaped dictation. What it can't do yet: parentheses, brackets, anything that depends on visual structure rather than spoken form. Those still need the keyboard. The net-WPM-after-cleanup is closer to 1.5x than the raw 2x, once I account for re-reading and fixing what didn't land. The thinking gain still wins for me. The tax is real.
+Handy handles part of the cleanup automatically. It picks up tone, so a question gets a question mark without me saying "question mark." That's enough for most prose-shaped dictation. What it can't do yet: parentheses, brackets, anything that depends on visual structure rather than spoken form. Those still need the keyboard. The net-WPM-after-cleanup is closer to 1.5x than the raw 2x, once I account for re-reading and fixing what didn't land. The thinking gain still wins for me, but the cleanup is a real cost I pay on every transcript.
 
 ## the open-landscape problem
 
