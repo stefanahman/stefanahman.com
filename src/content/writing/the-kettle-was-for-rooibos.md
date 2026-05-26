@@ -6,7 +6,7 @@ draft: true
 tags: [food, reflection, life]
 ---
 
-A guest came over. I asked if they wanted tea. They said yes. I made rooibos. Rooibos isn't tea.
+Rooibos isn't tea. A guest came over, I asked if they wanted tea, they said yes, and I made rooibos.
 
 The fact has been sitting in my head for a while, but the moment with the kettle and the cups was the first time I said it out loud to someone who didn't know.
 
@@ -29,7 +29,7 @@ Mostly oxidation. How much air the leaf gets between being plucked and being dri
 - **Black**: fully oxidized. The leaf turns dark, the flavour turns malty.
 - **Pu'er**: oxidized and then post-fermented with microbes. Sometimes aged for decades. Traded like wine.
 
-Six tins on the shelf, one plant in the field. The leaves picked from a bush in Yunnan could become any of them depending on what someone in a warehouse decided to do.
+Six tins on the shelf, one plant in the field. The leaves picked from a bush in Yunnan could become any of them depending on what the person processing them decided to make.
 
 ## the non-teas
 
@@ -43,7 +43,7 @@ Most tisanes have zero caffeine. That's the useful thing to know when someone as
 
 ## the one exception
 
-Yerba mate is the tisane that pretends to be tea on caffeine. About 70 mg a cup, same neighbourhood as black tea. South American holly leaf, drunk from a gourd with a metal straw in Argentina, Paraguay, Uruguay, southern Brazil. The IARC classifies any beverage above 65°C as "probably carcinogenic", and mate is typically served at 70°C. So is your tea, if you drink it straight from the kettle. Not a tea. Also not the calm option.
+Yerba mate is the tisane that pretends to be tea on caffeine. About 70 mg a cup, same neighbourhood as black tea. South American holly leaf, drunk from a gourd with a metal straw in Argentina, Paraguay, Uruguay, southern Brazil. Not a tea, but not a calm one either. The IARC classifies any beverage above 65°C as "probably carcinogenic", and mate is typically served at 70°C. So is your tea, if you drink it straight from the kettle.
 
 ## tea and chai
 
@@ -55,6 +55,4 @@ Which means a "chai tea latte" is, etymologically, a tea tea latte. I have not b
 
 ## what I do with this
 
-Mostly nothing. I drink what I drink. Black tea most mornings, rooibos before bed, a proper green tea when I want to slow down and pay attention to it.
-
-But when someone wants something hot in the evening, I ask one more question now. Tea or tisane? Caffeine or not? It's a better starting point than "want a tea?", and most of the time it lands a better cup.
+Mostly nothing. Black tea most mornings, rooibos before bed. But when someone wants something hot in the evening, I ask one more question now. Tea or tisane? Caffeine or not?
