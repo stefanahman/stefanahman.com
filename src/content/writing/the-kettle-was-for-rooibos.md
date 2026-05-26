@@ -1,8 +1,8 @@
 ---
 title: The kettle was for rooibos
-description: A friend asked for tea. I made rooibos. Rooibos isn't tea, and most of what we call tea isn't either.
+description: Rooibos isn't tea, all real tea comes from one plant, and most of what we call tea is something else.
 pubDate: 2026-05-26
-draft: true
+draft: false
 tags: [food, reflection, life]
 ---
 
@@ -12,11 +12,9 @@ The fact has been sitting in my head for a while, but the moment with the kettle
 
 ## one plant
 
-Every tea you've ever drunk came from the same plant. Camellia sinensis. Black, green, white, oolong, yellow, pu'er. All the same leaf. What changes is what happens to the leaf after it's picked.
+Every tea you've ever drunk came from the same plant. Camellia sinensis. Black, green, white, oolong, yellow, pu'er, all of it the same leaf. What changes is what happens to that leaf after it's picked.
 
-I find this absurd in the best way. I'd assumed green tea came from one bush and black tea from another. The way coffee and chocolate come from different plants. Apples and pears.
-
-It's the same plant.
+I find this absurd in the best way. I'd always assumed green tea grew on one kind of bush and black tea on another, the way coffee and cocoa come from different plants. But it's one bush, and a leaf turns into green or black or white depending only on how someone handles it after the picking.
 
 ## what makes the difference
 
@@ -35,7 +33,7 @@ Six tins on the shelf, one plant in the field. The leaves picked from a bush in 
 
 So if all real tea is one plant, what's everything else?
 
-The proper word is **tisane**. From the Greek *ptisanē*, meaning barley drink. English calls it "herbal tea" because English calls everything tea. French menus are more careful: *infusion* or *tisane* for chamomile, peppermint, hibiscus, ginger, lemon balm. Not tea.
+The proper word is **tisane**. From the Greek *ptisanē*, meaning barley drink. English calls it "herbal tea" because English calls everything tea. French menus are more careful, listing chamomile, peppermint, hibiscus, ginger, and lemon balm as *infusion* or *tisane*, because none of them come from the tea plant.
 
 Rooibos is the famous one. *Aspalathus linearis*, a South African shrub from the broom family. Only grows in the Cederberg region of the Western Cape. The EU gave it Protected Designation of Origin status in 2021. Same legal protection as Champagne. You cannot grow rooibos in Stockholm even if you wanted to.
 
