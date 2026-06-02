@@ -1,7 +1,7 @@
 ---
 title: In a case
 description: A long weekend offline in the Norwegian mountains, and then a sharp realization at the desk about how I keep picking up my phone.
-pubDate: 2026-05-27
+pubDate: 2026-06-02
 draft: false
 tags: [attention, phone, reflection, life]
 ---
