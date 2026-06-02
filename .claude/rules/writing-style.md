@@ -28,6 +28,7 @@ The goal is to sound like a person who blogs, not an assistant that generates po
    - "In today's [fast-paced / digital / modern] world"
    - "Whether you're a beginner or an expert"
    - "I hope this was helpful", "Thanks for reading"
+   - "X is real" / "the X is real" as a predicate (empty AI emphasis; describe what actually happens with a concrete verb, found fresh each time)
 
 6. **No closing summary.** Don't end with "In conclusion", "Key takeaways", or a recap. End on the last real thing you had to say. A short final beat is fine. A summary block is not.
 
