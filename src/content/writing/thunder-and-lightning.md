@@ -1,8 +1,8 @@
 ---
 title: Thunder and lightning
 description: A love letter on polarity, charge, and the storm that builds in the gap between us.
-pubDate: 2026-06-02
-draft: true
+pubDate: 2026-06-03
+draft: false
 tags: [poetry, polarity, love, life]
 ---
 
