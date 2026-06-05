@@ -35,6 +35,15 @@ const imageUrl = new URL(image, Astro.site ?? Astro.url.origin).href;
 const path = Astro.url.pathname;
 const isWriting = path.startsWith('/writing');
 
+// Routing tags double as the analytics content-type dimension (tech vs life).
+// Fired as a custom Umami event below so the Insights report can segment the
+// two audiences; the dimension lives in frontmatter, not the URL.
+const contentType = tags.includes('tech')
+  ? 'tech'
+  : tags.includes('life')
+    ? 'life'
+    : undefined;
+
 const siteUrl = Astro.site?.href ?? Astro.url.origin;
 const authorSameAs = [
   'https://github.com/stefanahman',
@@ -162,6 +171,17 @@ const articleJsonLd =
         src="https://umami.steflix.net/u"
         data-website-id="6cfd0d4f-69ff-471e-99d7-fb57736c1ddd"
       />
+    )}
+    {import.meta.env.PROD && type === 'article' && contentType && (
+      <script is:inline define:vars={{ contentType, slug: path }}>
+        (function track() {
+          if (window.umami) {
+            window.umami.track('article-view', { content_type: contentType, slug });
+          } else {
+            setTimeout(track, 300);
+          }
+        })();
+      </script>
     )}
   </head>
   <body>
