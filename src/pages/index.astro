@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Subscribe from '../components/Subscribe.astro';
 import { getPublishedWriting } from '../lib/content';
 
 const posts = (await getPublishedWriting())
@@ -30,4 +31,6 @@ const shortDate = (d: Date) =>
     </ul>
     <p style="margin-top: 1.5rem;"><a href="/writing">All writing →</a></p>
   </section>
+
+  <Subscribe />
 </BaseLayout>
