@@ -8,7 +8,9 @@ import { join } from 'node:path';
 const WRITING_DIR = 'src/content/writing';
 const MAIN_TAGS = ['tech', 'life'];
 
-const files = (await readdir(WRITING_DIR)).filter((f) => f.endsWith('.md'));
+const files = (await readdir(WRITING_DIR)).filter(
+  (f) => f.endsWith('.md') || f.endsWith('.mdx'),
+);
 const offenders = [];
 
 for (const file of files) {

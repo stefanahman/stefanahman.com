@@ -10,7 +10,7 @@ paths:
 
 These rules apply to anything written *for this site*: blog posts in `src/content/writing/`, page copy in `.astro` files (homepage descriptor, about, footer, etc.), meta descriptions, and any drafts proposed in conversation. They do not apply to code comments.
 
-The goal is to sound like a person who blogs, not an assistant that generates posts. Modeled on the rhythms of Mitchell Hashimoto, Julia Evans, Simon Willison, Lee Robinson, Maggie Appleton, and Josh Comeau.
+The goal is to sound like Stefan, not an assistant that generates posts. The anchor is his own published posts in `src/content/writing/` and the corrections in `voice-corrections.md`. Other bloggers (Hashimoto, Evans, Willison, and whoever else) are fair inspiration for moves and rhythms worth trying — never a style to copy because it works for them. A borrowed move earns its place the same way everything else does: Stefan keeps it after seeing it in his own draft.
 
 ## Rules
 
@@ -22,13 +22,25 @@ The goal is to sound like a person who blogs, not an assistant that generates po
 
 4. **No "not just X, but Y" pivots.** No "it's not about X, it's about Y". These inverted-emphasis rhythms are the most recognizable AI tic. Just say what you mean.
 
-5. **Banned phrases.** Cut these on sight:
-   - "Let's dive in", "Let's explore", "Let's take a closer look"
-   - "It's worth noting", "Importantly", "Ultimately", "In essence", "At its core"
-   - "In today's [fast-paced / digital / modern] world"
-   - "Whether you're a beginner or an expert"
-   - "I hope this was helpful", "Thanks for reading"
-   - "X is real" / "the X is real" as a predicate (empty AI emphasis; describe what actually happens with a concrete verb, found fresh each time)
+5. **Banned phrases.** Cut these on sight. The fenced block below is machine-read by `scripts/check-banned-phrases.mjs`, which fails the production build if a published post matches. One entry per line: lines wrapped in `/.../i` are regexes, everything else is a case-insensitive literal. Add new entries here and the check follows automatically.
+
+   ```banned-phrases
+   let's dive in
+   let's explore
+   let's take a closer look
+   it's worth noting
+   /\bimportantly\b/i
+   /\bultimately\b/i
+   in essence
+   at its core
+   /in today's \w+(-\w+)? world/i
+   whether you're a beginner
+   i hope this was helpful
+   thanks for reading
+   /\b(is|are) real[.,;]/i
+   ```
+
+   The last regex is the "X is real" predicate: empty AI emphasis. Describe what actually happens with a concrete verb, found fresh each time.
 
 6. **No closing summary.** Don't end with "In conclusion", "Key takeaways", or a recap. End on the last real thing you had to say. A short final beat is fine. A summary block is not.
 
@@ -47,6 +59,8 @@ The goal is to sound like a person who blogs, not an assistant that generates po
 13. **For explanatory or technical posts, lead with the answer.** If the post is "How to X" or "Why Y", the first sentence should answer X or Y. AI engines and impatient readers extract the first parseable answer. Setup paragraphs lose the citation. This is the machine-readable counterpart to rule 1.
 
 14. **No terse declarative stub-closers.** Don't end a paragraph, or stand a one-line paragraph, on a dramatic 3-to-5-word restatement of what you just said: "It's the same plant.", "Not tea.", "The tax is real.", "Apples and pears." It reads as an AI tic, not a human writer. Fold the point into a real sentence instead. A genuine short contrastive sentence in natural speech is fine ("Real tea has caffeine. Rooibos doesn't."); the dramatic snap-back restatement is not. Note: a critique that praises this pattern as a "signature move" is wrong, ignore it.
+
+15. **End on a practice, not a thesis.** The closing line should be something concrete the writer (or reader) does, ideally still imperfect — not a summary claim. Evidence across published posts: "cook the base of meals from scratch most days" (the-number-on-the-back), "Tea or tisane? Caffeine or not?" (the-kettle-was-for-rooibos), "catching myself when the hand starts to reach" (in-a-case), "I am learning to stay grounded in the wait" (thunder-and-lightning). The thesis is the body's job.
 
 ## Scope notes
 
