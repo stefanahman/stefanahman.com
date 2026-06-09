@@ -66,6 +66,21 @@ Judgment-level (not build-enforced), because they can be legitimate in quotes or
 ✗ "The meeting doesn't end us. It empties us, only so we can fill again."
 ✓ "The meeting empties us so we can fill again."
 
+## abstract workhorse noun → concrete referent
+
+✗ "I caught my state before I dialed."
+✓ "I caught the numbness before I dialed."
+
+✗ "Each one asks for a different state."
+✓ "Each one asks for a different version of me."
+(Stefan flagged "state" twice in one session once it passed ~4 uses. The fix is naming what the state actually is in that sentence, not a synonym swap.)
+
+## retired closer template
+
+✗ "Acting on what the noticing tells me is the part I'm still practicing."
+✓ "The noticing works now. So next time I anchor myself before the call, name where I'm at in the first minute, and ask if it works for both of us to talk right now."
+("X is the part I'm still [gerund]" appeared in three posts in a month — learning, building, practicing. It began as an accepted line and became a template. Retired until the published uses age out; end on the concrete next move instead.)
+
 ## setup-first opener → hook-first opener
 
 ✗ "A guest came over. I asked if they wanted tea. They said yes. I made rooibos. Rooibos isn't tea."
