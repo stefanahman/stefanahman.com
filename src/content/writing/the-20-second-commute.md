@@ -55,10 +55,12 @@ So the practice I'm building is a pause where the commute used to be. Stop at th
 
 And there's a step beyond the pause: seeing it coming. Knowing, before the day ends, what it's going to leave in me. Some days will be tougher than others, deadlines don't care, but the awareness can be there anyway, and once it is, I know what to do about it.
 
+## the gap
+
 Even today shows how far there is to go. The pause did its job, but five or ten minutes in the sun doesn't refill a whole day's drain. The gap between where I was and what the call asked of me stayed too big. Hours later, writing this, I understand what I could have done differently. Getting that understanding into the body, where it can act in the moment, is a slower kind of learning.
 
 The disappointment came afterwards, in two layers. I had trusted the ground between us to hold me as I was, the tired version of me, and I had trusted my pause to be long enough to show up as the man I want to be. Tonight, both needed more than I'd given them, and I slid into the old belief that it wasn't enough.
 
-Then I came back to the progress: not long ago I wouldn't have caught any of this at all. I've seen the pattern since the offline weekend in Norway I wrote about in [In a case](/writing/in-a-case/): coming back drained, evenings that ask for more than I have.
+Then I came back to the progress: not long ago I wouldn't have caught any of this at all. The pattern itself is older. It was there after the offline weekend in Norway from [In a case](/writing/in-a-case/), underneath the restlessness I did write about: coming back online drained, connecting by phone with less than I want to bring.
 
 The noticing works now. And I know we have the trust and the love between us to speak honestly and to set our own boundaries. So next time I anchor myself before the call, name where I'm at in the first minute, and ask if it works for both of us to talk right now.
