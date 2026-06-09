@@ -26,7 +26,7 @@ The mode I work in on days like today is a robotic one. Systematically implement
 
 Those days take more out of me than the open, creative ones, and they need longer breaks than I tend to give them.
 
-Home asks for something else. To be emotionally available. To connect with my love instead of accomplishing the evening. The shift between those two is not automatic, and on days when both of us have been working from home, there can be two work-minds meeting in the kitchen, and we get weird and charged around each other.
+Home asks for something else. To be emotionally available. To connect with my love instead of accomplishing the evening. The shift between those two is not automatic. On days when both of us have been working from home, there can be two work-minds meeting in the kitchen, and we get weird and charged around each other.
 
 And it's wider than work and home. I move through more roles than these two: engineer, partner, friend, son. Each one asks for a different version of me. I like that: every role gives an outlet for a different need in my life.
 
@@ -41,11 +41,11 @@ Tonight I could only point at one kind of tiredness. There are more, and a full 
 - **Motivational.** No initiative left, not even for deciding what to eat.
 - **Rhythmic.** No daylight, no movement, lunch at the desk. The body loses its sense of what time it is.
 
-This is the extreme version, not my every weekday. But on the intense days I recognize myself in it: breakfast in front of the screen, posture forgotten, too long without daylight. I only felt the motivational one. The other five were probably there too, just quieter, and that's what unsettles me about the bubble: the state shifts arrive unnoticed until the day ends and the bill comes all at once.
+This is the extreme version, not my every weekday. But on the intense days I recognize myself in it: breakfast in front of the screen, posture forgotten, too long without daylight. Tonight I only felt the motivational one. The other five were probably there too, just quieter, and that's what unsettles me about the bubble: the state shifts arrive unnoticed until the day ends and the bill comes all at once.
 
 ## the pause
 
-My love wasn't home today. The arrival waiting for me was that phone call, and I caught the numbness before I dialed. I felt proud of that.
+My love wasn't home. The arrival waiting for me was that phone call, and I caught the numbness before I dialed. I felt proud of that.
 
 What I did was small. I took a chair outside, sat in the sun for five or ten minutes, closed my eyes, and let myself be okay with everything flying around inside of me.
 
@@ -55,7 +55,7 @@ So the practice I'm building is a pause where the commute used to be. Stop at th
 
 And there's a step beyond the pause: seeing it coming. Knowing, before the day ends, what it's going to leave in me. Some days will be tougher than others, deadlines don't care, but the awareness can be there anyway, and once it is, I know what to do about it.
 
-Even today shows how far there is to go. The pause did its job, but five or ten minutes in the sun doesn't refill a whole day's drain. The gap between where I was and what the call asked of me stayed too big. Postponing it would have been one honest move. Easy to write now, hours later. In the moment I couldn't know how the call would go.
+Even today shows how far there is to go. The pause did its job, but five or ten minutes in the sun doesn't refill a whole day's drain. The gap between where I was and what the call asked of me stayed too big. Hours later, writing this, I understand what I could have done differently. Getting that understanding into the body, where it can act in the moment, is a slower kind of learning.
 
 The disappointment came afterwards, in two layers. I had trusted the ground between us to hold me as I was, the tired version of me, and I had trusted my pause to be long enough to show up as the man I want to be. Tonight, both needed more than I'd given them, and I slid into the old belief that it wasn't enough.
 
