@@ -2,7 +2,7 @@
 title: The 20-second commute
 description: I finished an intense workday with nothing left, and started building a pause where the commute used to be.
 pubDate: 2026-06-09
-draft: true
+draft: false
 tags: [work, attention, reflection, life]
 ---
 
