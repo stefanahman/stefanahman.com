@@ -29,7 +29,7 @@ When invoked with a draft path:
 
 ### Delta pass
 
-When the invocation asks for a `delta` pass (or notes the draft changed substantially since a previous review), skip the two-pass ritual. Run one short pass on the final text only: mechanics, repetition & echoes, rhythm, consistency, and rule violations. 3-8 findings, same quote/why/try shape. No Socratic questions, no Voice Watch. Edits applied after a review are where new damage hides; the delta pass exists to catch exactly that.
+When the invocation asks for a `delta` pass (or notes the draft changed substantially since a previous review), skip the two-pass ritual. Run one short pass on the final text only: mechanics, repetition & echoes, rhythm, consistency, and rule violations. 3-8 findings, same numbered quote/why/try shape. No Socratic questions, no Voice Watch. Edits applied after a review are where new damage hides; the delta pass exists to catch exactly that.
 
 ---
 
@@ -67,9 +67,9 @@ Skip pedantry: split infinitives, sentence-ending prepositions, "and"/"but" open
 
 **Cuts.** Stephen King's target: second draft = first draft minus 10%. Which paragraph would you cut to hit it? A paragraph earns its place if it advances the argument, deepens an idea, or changes the reader's understanding. Otherwise it's a darling.
 
-For each finding use this shape:
+Number every finding sequentially across the whole review (editorial findings, then Socratic questions continue the same sequence) so Stefan can reply "1 good, 3 skip, 5 show me". For each finding use this shape:
 
-> **[category]** — quote of the offending line.
+> **1. [category]** — quote of the offending line.
 > *Why:* one sentence on what hurts the reader.
 > *Try:* one sentence rewrite OR one sharpening question.
 
