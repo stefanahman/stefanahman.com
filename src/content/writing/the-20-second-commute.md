@@ -18,15 +18,15 @@ When I work from home, my commute is twenty seconds, the walk from the office to
 
 There used to be something between work and home. A train, a platform, weather, strangers. Researchers studying commutes call that stretch a [liminal space](https://phys.org/news/2023-03-psychological-benefits-commuting-remote-doesnt.html), time that belongs to neither role, and their early data suggests people let go of work more easily on days with longer commutes. The recovery literature has a name for what the commute was quietly doing: [psychological detachment](https://pmc.ncbi.nlm.nih.gov/articles/PMC11731735/), the sense of being away from work. It predicts wellbeing better than most things we try on purpose.
 
-With twenty seconds, none of that happens. I arrive in the living room as the person work shaped that day. Same rooms, same chairs, same mind. And some days there is no walk at all. Today it was a phone call, too close to the end of the workday.
+With twenty seconds, none of that happens. I arrive in the living room as the person work shaped that day. Same rooms, same chairs, same mind. And some days there is no walk at all. Today it was a phone call.
 
 ## the work-mind
 
-The mode I work in on days like this is a robotic one. Systematically implementing tasks, thinking in ones and zeroes, pushing things over the line, with the feelings turned down. Less creativity, less flow. That mode is right for the work, and it follows me through the twenty seconds.
+The mode I work in on days like today is a robotic one. Systematically implementing tasks, thinking in ones and zeroes, pushing things over the line, with the feelings turned down. Less creativity, less flow. That mode is right for the work, and it follows me through the twenty seconds.
 
-Days like this take more out of me than the open, creative ones, and they need longer breaks than I tend to give them.
+Those days take more out of me than the open, creative ones, and they need longer breaks than I tend to give them.
 
-Home asks for something else. To be emotionally available. To connect with my love instead of accomplishing the evening. The shift between those two is not automatic, and on days when both of us have been working from home, there can be two work-minds meeting in the kitchen, and it can get weird and charged around each other.
+Home asks for something else. To be emotionally available. To connect with my love instead of accomplishing the evening. The shift between those two is not automatic, and on days when both of us have been working from home, there can be two work-minds meeting in the kitchen, and we get weird and charged around each other.
 
 And it's wider than work and home. I move through more roles than these two: engineer, partner, friend, son. Each one asks for a different version of me. I like that: every role gives an outlet for a different need in my life.
 
@@ -45,7 +45,7 @@ This is the extreme version, not my every weekday. But on the intense days I rec
 
 ## the pause
 
-My love wasn't home today. The arrival waiting for me was a phone call, and I caught the numbness before I dialed. I felt proud of that, seeing it beforehand for once.
+My love wasn't home today. The arrival waiting for me was that phone call, and I caught the numbness before I dialed. I felt proud of that.
 
 What I did was small. I took a chair outside, sat in the sun for five or ten minutes, closed my eyes, and let myself be okay with everything flying around inside of me.
 
@@ -53,10 +53,12 @@ I'm practicing taking responsibility for what I bring into the evening. I want t
 
 So the practice I'm building is a pause where the commute used to be. Stop at the office door. Notice where I actually am: which of the six, how deep, what's left. Then choose how I want to show up in the living room, or on the phone, before I'm standing in it.
 
-And there's a step beyond the pause: seeing it coming. Knowing, before the day ends, what it's going to leave in me. Some days will be tougher than others, deadlines don't care, but the awareness can be there anyway, and with it what I need to do about it.
+And there's a step beyond the pause: seeing it coming. Knowing, before the day ends, what it's going to leave in me. Some days will be tougher than others, deadlines don't care, but the awareness can be there anyway, and once it is, I know what to do about it.
 
-Even today shows how far there is to go. The pause did its job, but five or ten minutes in the sun doesn't refill a whole day's drain. The gap between where I was and what the call asked of me stayed too big. Postponing it would have been one honest move. Easy to write now, hours later. In the moment I couldn't know beforehand how the call would go.
+Even today shows how far there is to go. The pause did its job, but five or ten minutes in the sun doesn't refill a whole day's drain. The gap between where I was and what the call asked of me stayed too big. Postponing it would have been one honest move. Easy to write now, hours later. In the moment I couldn't know how the call would go.
 
-The disappointment came afterwards, in two layers. I had trusted the ground between us to hold whatever I shared, and I had trusted my pause to be long enough to show up as the man I want to be. Tonight, both needed more than I'd given them, and I slid into the old belief that it wasn't enough. Then I come back to the progress: not long ago I wouldn't have caught any of this at all. I've seen the pattern since the offline weekend in Norway I wrote about in [In a case](/writing/in-a-case/): coming back drained, evenings that ask for more than I have.
+The disappointment came afterwards, in two layers. I had trusted the ground between us to hold me as I was, the tired version of me, and I had trusted my pause to be long enough to show up as the man I want to be. Tonight, both needed more than I'd given them, and I slid into the old belief that it wasn't enough.
 
-The noticing works now. And we do have the trust and the love between us to share where we're at and to set our own boundaries. So next time I anchor myself before the call, name where I'm at in the first minute, and ask if it works for both of us to talk right now.
+Then I came back to the progress: not long ago I wouldn't have caught any of this at all. I've seen the pattern since the offline weekend in Norway I wrote about in [In a case](/writing/in-a-case/): coming back drained, evenings that ask for more than I have.
+
+The noticing works now. And I know we have the trust and the love between us to speak honestly and to set our own boundaries. So next time I anchor myself before the call, name where I'm at in the first minute, and ask if it works for both of us to talk right now.
