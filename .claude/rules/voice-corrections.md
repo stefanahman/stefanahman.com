@@ -16,6 +16,7 @@ Judgment-level (not build-enforced), because they can be legitimate in quotes or
 - **ache / aching** — "too much LLM"
 - **hoist** — never
 - **land / lands** in the success sense ("the line lands", "lands a better cup", "before it lands") — vetoed repeatedly. The plain spatial sense has been accepted ("landed below words"); the punchy success-verb is the tell.
+- **residue** — "something simpler". Reached-for fancy noun where a plain phrase does the job ("what the workday left in me").
 
 ## dramatic stub-closers → folded into a real sentence
 
