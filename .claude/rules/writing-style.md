@@ -22,25 +22,7 @@ The goal is to sound like Stefan, not an assistant that generates posts. The anc
 
 4. **No "not just X, but Y" pivots.** No "it's not about X, it's about Y". These inverted-emphasis rhythms are the most recognizable AI tic. Just say what you mean.
 
-5. **Banned phrases.** Cut these on sight. The fenced block below is machine-read by `scripts/check-banned-phrases.mjs`, which fails the production build if a published post matches. One entry per line: lines wrapped in `/.../i` are regexes, everything else is a case-insensitive literal. Add new entries here and the check follows automatically.
-
-   ```banned-phrases
-   let's dive in
-   let's explore
-   let's take a closer look
-   it's worth noting
-   /\bimportantly\b/i
-   /\bultimately\b/i
-   in essence
-   at its core
-   /in today's \w+(-\w+)? world/i
-   whether you're a beginner
-   i hope this was helpful
-   thanks for reading
-   /\b(is|are) real[.,;]/i
-   ```
-
-   The last regex is the "X is real" predicate: empty AI emphasis. Describe what actually happens with a concrete verb, found fresh each time.
+5. **Banned phrases.** Cut these on sight. The canonical, build-enforced list lives in `scripts/banned-phrases.txt` (one entry per line; `/.../i` lines are regexes, others case-insensitive literals). `scripts/check-banned-phrases.mjs` fails the production build if a published post matches. Add new entries to the txt file and the check follows automatically. Highlights: "let's dive in/explore", "it's worth noting", "importantly", "ultimately", "in essence", "at its core", "I hope this was helpful", "thanks for reading", and the "X is real" predicate (empty AI emphasis; describe what actually happens with a concrete verb, found fresh each time).
 
 6. **No closing summary.** Don't end with "In conclusion", "Key takeaways", or a recap. End on the last real thing you had to say. A short final beat is fine. A summary block is not.
 

@@ -1,0 +1,17 @@
+# Build-enforced banned phrases for published posts (writing-style.md rule 5).
+# One entry per line: /.../i lines are regexes, everything else is a
+# case-insensitive literal. Lines starting with # are comments.
+let's dive in
+let's explore
+let's take a closer look
+it's worth noting
+/\bimportantly\b/i
+/\bultimately\b/i
+in essence
+at its core
+/in today's \w+(-\w+)? world/i
+whether you're a beginner
+i hope this was helpful
+thanks for reading
+# "X is real" predicate: empty AI emphasis. Use a concrete verb, found fresh.
+/\b(is|are) real[.,;]/i

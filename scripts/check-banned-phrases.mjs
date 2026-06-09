@@ -1,27 +1,22 @@
 // Fails the build if any *published* writing post violates the mechanically
-// checkable voice rules: em-dashes (rule 3) and the banned phrases parsed from
-// the ```banned-phrases``` block in .claude/rules/writing-style.md (rule 5).
-// One entry per line: /.../i lines are regexes, others case-insensitive
-// literals. Vetoed words in voice-corrections.md are judgment-level and
-// deliberately not enforced here.
+// checkable voice rules: em-dashes (rule 3) and the banned phrases listed in
+// scripts/banned-phrases.txt (rule 5 in .claude/rules/writing-style.md points
+// here). One entry per line: /.../i lines are regexes, others case-insensitive
+// literals, # lines are comments. Vetoed words in voice-corrections.md are
+// judgment-level and deliberately not enforced here.
 
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const WRITING_DIR = 'src/content/writing';
-const RULES_FILE = '.claude/rules/writing-style.md';
+const PHRASES_FILE = 'scripts/banned-phrases.txt';
 
-const rules = await readFile(RULES_FILE, 'utf-8');
-const block = rules.match(/```banned-phrases\n([\s\S]*?)```/);
-if (!block) {
-  console.error(`No \`\`\`banned-phrases block found in ${RULES_FILE}.`);
-  process.exit(1);
-}
+const phrases = await readFile(PHRASES_FILE, 'utf-8');
 
 const checks = [[/—/, 'rule 3: em-dash']];
-for (const raw of block[1].split('\n')) {
+for (const raw of phrases.split('\n')) {
   const line = raw.trim();
-  if (!line) continue;
+  if (!line || line.startsWith('#')) continue;
   const asRegex = line.match(/^\/(.+)\/(\w*)$/);
   if (asRegex) {
     checks.push([new RegExp(asRegex[1], asRegex[2]), `rule 5: ${line}`]);

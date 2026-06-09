@@ -12,7 +12,7 @@ Posts live in `src/content/writing/` as `.md`, or `.mdx` when using components (
 
 Two layers, both auto-loaded from `.claude/rules/`:
 
-- `writing-style.md` — principles. Numbered rules plus a machine-read `banned-phrases` block under rule 5 that the build enforces.
+- `writing-style.md` — principles. Numbered rules; rule 5's banned phrases are build-enforced from `scripts/banned-phrases.txt` (the canonical list, outside `.claude/` so the Docker build can run the check).
 - `voice-corrections.md` — evidence. Before/after pairs and vetoed words from editing sessions. Judgment-level, not build-enforced.
 
 Capture discipline, every writing session:
