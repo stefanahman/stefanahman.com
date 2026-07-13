@@ -15,8 +15,22 @@ Judgment-level (not build-enforced), because they can be legitimate in quotes or
 
 - **ache / aching** — "too much LLM"
 - **hoist** — never
-- **land / lands** in the success sense ("the line lands", "lands a better cup", "before it lands") — vetoed repeatedly. The plain spatial sense has been accepted ("landed below words"); the punchy success-verb is the tell.
+- **land / lands** in any abstract sense. The success sense ("the line lands", "lands a better cup", "before it lands") and the positional compare/contrast sense ("other frameworks land in different places", "the argument lands here") are both AI transition-tissue. The plain spatial sense of a physical thing coming to rest is accepted ("landed below words", "the plane landed").
 - **residue** — "something simpler". Reached-for fancy noun where a plain phrase does the job ("what the workday left in me").
+
+## meta-labeling the mode → let the substance carry the signal
+
+✗ "Here's the honest part. I picked pomodoro because I'd heard about it."
+✓ "I picked pomodoro because I'd heard about it."
+
+Stefan flagged this as "very AI, the honesty speaks for itself." Announcing the mode of speech is the tell. Real disclosure doesn't need the label; substance carries the signal. Same family:
+
+- "Here's the honest part", "To be honest", "Honestly", "The truth is", "Let me be candid"
+- "Here's what the research says", "Here's the interesting thing", "Here's what I found"
+- "I want to sit with a hypothesis", "I'm being careful about the size of the claim", "What I'm noting is"
+- "My hypothesis:", "The key insight is", "The important thing is"
+
+The fix is always the same: cut the announcement, keep the claim.
 
 ## dramatic stub-closers → folded into a real sentence
 
