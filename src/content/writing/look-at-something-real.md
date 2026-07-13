@@ -1,5 +1,5 @@
 ---
-title: A hard cut
+title: Look at something real
 description: A conversation with my love about my workday turned into a break screen I built into my terminal.
 pubDate: 2026-07-13
 draft: true
