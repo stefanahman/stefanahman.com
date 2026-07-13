@@ -8,6 +8,21 @@ Stefan is the creator and makes the choices. On decisions with real alternatives
 
 Posts live in `src/content/writing/` as `.md`, or `.mdx` when using components (e.g. `Term`, the hover-translation tooltip in `src/components/Term.astro`). Frontmatter: `description` required, at least one main tag (`tech` or `life`) required for the RSS topic feeds, `draft: true` keeps a post out of production, `related: [slug, ...]` overrides the tag-based related-posts matching, `image` overrides the default OG image.
 
+## companion posts
+
+For a topic with both a life and a tech dimension, prefer two companion posts over one dual-audience post. Life post keeps its reflective register; tech post can go into setup, code, dir structure, decision archaeology. Cross-link them via `related: [slug]` in both frontmatters, and inline at natural moments with varied anchor text ("the engineering companion" / "the reflection that made me build this"). Same anchor twice dilutes signals.
+
+Trigger: at draft-start, when the tech content would take more than one skippable section to cover. Also valid: writing a companion to an existing post when the other side has grown substantial enough to stand alone.
+
+Rules for both posts:
+
+- Distinct titles, slugs, and descriptions. No verbatim overlap in metadata.
+- Different primary tags (`life` vs `tech`) plus topic tags per dimension.
+- No copy-pasted paragraphs. Ideas can echo, sentences don't.
+- Each targets its own keywords in title, first paragraph, and headings.
+
+Why: topic-cluster architecture drives more organic traffic and AI citations than dual-topic single posts when search intents are genuinely different (different queries, different reader profiles). Cleaner writing too: each post keeps its own voice register instead of forcing unity across dimensions.
+
 ## voice system
 
 Two layers, both auto-loaded from `.claude/rules/`:
@@ -24,7 +39,7 @@ Capture discipline, every writing session:
 
 ## writing workflow
 
-1. Draft with `draft: true`. Anchor in Stefan's published posts and `voice-corrections.md`, not generic blog voice.
+1. Draft with `draft: true`. Anchor in Stefan's published posts and `voice-corrections.md`, not generic blog voice. If the topic has both life and tech dimensions, decide the companion split first (see `## companion posts`).
 2. Review via `/review-prose` (writing-coach agent). Stefan picks which findings to apply.
 3. Commit the draft early; iterate in further commits.
 4. Pre-publish sweep: harvest new voice pairs from this draft's editing history into `voice-corrections.md`, prune contradictions, set `pubDate` to the actual publish date. If the draft changed substantially since its last review, run `/review-prose <file> delta` on the final text — post-review edits are where new damage hides.
