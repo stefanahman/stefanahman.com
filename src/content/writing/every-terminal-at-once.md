@@ -1,8 +1,8 @@
 ---
 title: Every terminal at once
 description: How I built a tmux break screen that appears in every terminal at once.
-pubDate: 2026-07-13
-draft: true
+pubDate: 2026-07-21
+draft: false
 tags: [tech, tools, tmux, terminal]
 related: [look-at-something-real]
 ---
@@ -53,7 +53,7 @@ while IFS=$'\t' read -r tty session; do
 done <<< "$snapshot"
 ```
 
-Break-screen is an ordinary bash program that renders the screen, reads input, and exits when the phrase matches. When it exits, the pane and session dies, and every client goes back to where it started.
+Break-screen is an ordinary bash program that renders the screen, reads input, and exits when the phrase matches. When it exits, the pane and session die, and every client goes back to where it started.
 
 One tmux default got in the way. When a session dies, every attached client detaches. Ghostty runs `zsh -lc "tmux attach ..."` as its command; when tmux exits, so does zsh, so does the window. The break session dying was closing every window I had open. `set-option detach-on-destroy off` on the break session changes that: tmux switches each client to another live session instead, and the snapshot loop restores the correct one.
 
@@ -65,7 +65,7 @@ This version was working, but every new feature broke a different corner of that
 
 ## the input handler
 
-Dismiss is by typing a rotating phrase. Case-insensitive, submit on Enter. Reading a keystroke while the star field animates in the periphery is one line:
+I dismiss the screen by typing a rotating phrase. Case-insensitive, submit on Enter. Reading a keystroke while the star field animates in the periphery is one line:
 
 ```bash
 IFS= read -t 0.4 -n 1 -s -r -d '' ch
@@ -80,7 +80,7 @@ What each flag does:
 - `-d ''`: delimiter is NUL, so Enter (CR/LF) is captured as a regular character instead of terminating the read.
 - `IFS=`: don't strip whitespace, so a space stays a space instead of being read as an empty Enter.
 
-Then the bug that took a lot longer to find. Fast typing was losing characters. Bash's `read -n 1 -s` briefly changes termios (canonical off, echo off) for each call and restores after. Between calls, the terminal is back in canonical (line-buffered) mode. Characters typed in that window go into the driver's line buffer. Bash's next `read` sometimes drops them, depending on timing.
+Then the bug that took a lot longer to find. Fast typing was losing characters. Bash's `read -n 1 -s` briefly changes termios (canonical off, echo off) for each call and restores after. Between calls, the terminal is back in canonical (line-buffered) mode. Characters typed in that gap go into the driver's line buffer. Bash's next `read` sometimes drops them, depending on timing.
 
 The fix was to set the target mode once, at the start of the main loop.
 
@@ -119,7 +119,7 @@ while tmux has-session -t pomodoro-break; do
 done
 ```
 
-The 30-second background kill guards the rare case where break-screen crashed before its trap could install.
+The 30-second background kill covers the rare case where break-screen crashes before its trap installs.
 
 ## the prompts
 

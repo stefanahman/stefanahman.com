@@ -1,13 +1,13 @@
 ---
 title: Look at something real
 description: A conversation with my love about my workday turned into a break screen I built into my terminal.
-pubDate: 2026-07-13
-draft: true
+pubDate: 2026-07-21
+draft: false
 tags: [work, attention, reflection, life]
 related: [every-terminal-at-once]
 ---
 
-My eyes were burning and my head was tight by mid-afternoon. I told my love about it. We talked about coming back to the body and feeling what I need, and that breaks are essential for that. She's a lot into somatic practices, and I love building my own tools. So I started building something that interrupts me and asks.
+My eyes were burning and my head was tight by mid-afternoon. I told my love about it. We talked about coming back to the body and feeling what I need. Breaks are essential for that. She's a lot into somatic practices, and I love building my own tools. So I started building something that interrupts me and asks what I need.
 
 ## what was actually draining me
 
@@ -19,7 +19,7 @@ Most of my workday runs in the terminal, so that's where the break had to happen
 
 I'd heard about pomodoro for a decade and never used it once. It's the classic productivity technique. Twenty-five minutes of focus, five minutes of break, four cycles and then a longer break of fifteen to thirty. Cirillo invented it in the late 1980s with a kitchen timer shaped like a tomato, and named the technique after the timer.
 
-I picked pomodoro because I'd heard about it. I hadn't done any research. Writing this post is what pushed me to pause and actually look. Everything below (the ultradian research, the DeskTime rule, and what agents changed about my focus) I found because I sat down to write about pomodoro.
+I picked pomodoro because I'd heard about it. I hadn't done any research. Writing this post is what pushed me to pause and actually look. That's how I found the ultradian research and the DeskTime rule, and noticed what agents changed about my focus.
 
 A [2025 scoping review](https://pmc.ncbi.nlm.nih.gov/articles/PMC12532815/) found that time-structured pomodoro sessions consistently improve focus and reduce mental fatigue compared to self-paced breaks. The mechanism that keeps showing up in the literature: [externally cued breaks work better than self-cued ones](https://www.browndailyherald.com/article/2026/03/fact-check-is-the-pomodoro-technique-actually-effective-for-studying). Left to cue myself, I get lost in time without realizing it. Some days I don't turn the break screen on, and it's almost scary how fast two hours go. What the research does not endorse is the 25-minute figure specifically, which was Cirillo's own kitchen-timer experiment.
 
@@ -41,13 +41,13 @@ Pomodoro is just where I'm starting. I'm happy to change the setup if something 
 
 ## coming back to the body
 
-In each break, the screen reminds me that I live in a body, outside the digital world, and it helps me to come back into it.
+In each break, the screen reminds me that I live in a body, outside the digital world, and helps me come back into it.
 
-The screen shows one reminder per break and rotates through them. Small nudges to check on my current needs, which change over time. Some breaks it might be to drink or eat, or a toilet break. Others are for movement: stretching, even a handstand.
+The screen shows one reminder per break and rotates through them. Small nudges to check on my current needs, which change over time. Some breaks the nudge is to drink, eat, or take a toilet break. Others are for movement: stretching, even a handstand. And some are for my eyes: one line on the screen says "look at something real".
 
 ## typing to close
 
-I'm still extending the screen. The latest addition is a phrase I have to type to close it. Something like "just breathe" or "notice this". I know they'll wear thin with repetition. It's small, but enough to interrupt the reflex of closing it without reading, which is what I was doing with the first version.
+I'm still extending the screen. The latest addition is a phrase I have to type to close it. Something like "just breathe" or "notice this". I know they'll wear thin with repetition. It's small, but enough to break the reflex of closing it without reading, which is what I was doing with the first version.
 
 ## so far
 
