@@ -29,7 +29,7 @@ const {
   image = '/og-default.png',
 } = Astro.props;
 
-const pageTitle = title ? `${title} — ${SITE_TITLE}` : SITE_TITLE;
+const pageTitle = title ? `${title} · ${SITE_TITLE}` : SITE_TITLE;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).href;
 const imageUrl = new URL(image, Astro.site ?? Astro.url.origin).href;
 const path = Astro.url.pathname;
@@ -110,8 +110,8 @@ const articleJsonLd =
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonical} />
     <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href="/rss.xml" />
-    <link rel="alternate" type="application/rss+xml" title={`${SITE_TITLE} — tech`} href="/feed/tech.xml" />
-    <link rel="alternate" type="application/rss+xml" title={`${SITE_TITLE} — life`} href="/feed/life.xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${SITE_TITLE} · tech`} href="/feed/tech.xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${SITE_TITLE} · life`} href="/feed/life.xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
